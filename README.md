@@ -12,6 +12,10 @@ The script fails with a clear message on stderr and exit status 1 when:
 - the copied file is empty; or
 - the copy is not byte-identical to the source.
 
+It also fails with a clear message if the output directory cannot be created or
+the copy cannot be written. The source image is only read, never modified. On
+success it exits with status 0.
+
 It is written for Python 3.13 and uses only the standard library.
 
 Run it locally:
